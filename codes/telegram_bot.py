@@ -2,8 +2,8 @@
 @Author:Rahul Ghuge
 Simple telegram bot class to send message and receive.
 use
-  token="1836363615:AAEb9DRMuvPhddU4rhclUV9cT27kM2GAE88"
-  chat_id="643446080"
+  token="1836363615:AAEb9ttMuvPhddU4rhclUV9cT27kM2GAE88"
+  chat_id="643446480"
   bot=Bot(token)
   #send message
   bot.send_message(chat_id,"hi")
@@ -36,7 +36,7 @@ class Bot:
            return True
         else:
            return False
-    def isFreshMessage(self,requests):
+    def isLatestMessage(self,requests):
         dt=datetime.datetime.now(tz)
         pastTime=dt-datetime.timedelta(seconds=1.4)
         messageTime=datetime.datetime.fromtimestamp(requests["message"]["date"],tz)
